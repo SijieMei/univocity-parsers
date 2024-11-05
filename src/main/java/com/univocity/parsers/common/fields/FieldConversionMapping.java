@@ -94,7 +94,7 @@ public class FieldConversionMapping implements Cloneable {
 
 		//Note this property is shared across all conversion mappings. This is required so
 		//the correct conversion sequence is registered for all fields.
-		conversionsByIndex = new HashMap<Integer, List<Conversion<?, ?>>>();
+		conversionsByIndex = new LinkedHashMap<Integer, List<Conversion<?, ?>>>();
 
 		// adds the conversions in the sequence they were created.
 		for (FieldSelector next : conversionSequence) {
